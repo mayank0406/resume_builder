@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const authRoutes = require("./routes/auth.routes");
+const testRoutes = require("./routes/test.routes");
 
 app.get("/", (req, res) => {
   res.send("Resume Builder API Running...");
@@ -21,5 +22,6 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/auth", authRoutes);
+app.use("/api/test", testRoutes);
 
 module.exports = app;
